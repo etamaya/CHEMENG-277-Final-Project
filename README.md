@@ -18,6 +18,8 @@ MAIN.PY
 main.py takes in the edited datasets and outputs the mean and the variance of the metrics used to evaluate the models' performances over a defined number of runs. For the multivariable linear regression and the neural network, the metric of interest is the coefficient of determination, and for the logistic classifiers, their accuracy. Each model uses a ten K-fold cross validation train/test split, with the mean of the metric from the cross validation being considered the metric from the overall run. The number of times that each model is ran can be changed by altering the variable "num_runs" in line 17 of main.py. There are no user inputs for running the script besides running the file.
 
 NEURALNETWORKPARAMETERSTUDIES.PY
-NeuralNetworkParameterStudies.py similaraly takes in the edited data sets and then runs an ablation study comparing neural networks with 1, 2, or 3 hidden layers of 100 neurons each. Each neural network is run 5 times with  the coefficients of determination averaged in order to account for the variability of the metric from run to run. If more or less datapoints are desired, the user can change the 
+NeuralNetworkParameterStudies.py similaraly takes in the edited data sets and then runs an ablation study comparing neural networks with 1, 2, or 3 hidden layers of 100 neurons each. Each neural network is run 5 times with the coefficients of determination averaged in order to account for the variability of the metric from run to run. If more or less datapoints are desired, the user can change the variable "num_runs" on line 27. Again, the only user action needed to run the ablation study is to run the python file.
 
+REGRESSIONPARAMETERTEST.PY
+RegressionParameterTest.py similarly takes in the edited data files and then determines the p-value for each parameter's coefficient in the regression. The regression is simply run once. No user input is needed. 
 
